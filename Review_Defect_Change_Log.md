@@ -1,6 +1,6 @@
 # Review / Defect / Change Log — Mini Issue Tracker
 
-Версія: 0.2  
+Версія: 0.5  
 Дата створення: 07.11.2026
 
 Журнал створено на етапі G4. Раніше описані перевірки фіксуються ретроспективно лише в межах видимих дій цього чату. Нові перевірки додаються окремими записами. Усі review тут виконані ChatGPT у тому самому чаті, якщо явно не вказано іншого перевіряльника. Незалежна людська перевірка не вигадується.
@@ -32,3 +32,50 @@
 - Результат: текстовий brief підготовлено; REV-01/02/04 закриті на рівні планування. REV-03 частково закрито обмеженим людським підтвердженням, незалежний контроль не стверджується.
 - Змінено: статуси D-09–14, фінальні версии документів, P-scope, sample metadata; джерело не змінено.
 - Доказ: перелічені фінальні файли та повідомлення автора. Жоден майбутній V/P/I test не отримав PASS. Figma generation не запускалась.
+
+## CHK-07 — F1, огляд першої версії та зміна дизайну
+
+- Дата доказів: 07–08.11.2026; запис складено 08.11.2026. Reviewer: ChatGPT, зображення надано автором роботи.
+- F1 report від Agent: заявлено 7 canonical frames, N-01–N-07, 5 definitions, 98 actual instances, Auto Layout. Це REPORTED Agent, не independently verified layer audit.
+- Перша версія 07.11: основні екрани та окремі читабельні REF screenshots оглянуто в чаті; mandatory defects не підтверджено, висота Title була optional UX observation.
+- 08.11 автор надав змінені екрани та fixtures, current connection overview. Спосіб/повні промпти всіх змін не надано; не приписувати їх ручному редагуванню або конкретному Agent request без доказу.
+- Поточний REF-01 відрізняється від першого та недостатньо читається; попередній review не переноситься автоматично.
+- Докази та current findings: 06_Review_Report.md §1–5. Зображення не доводять editable layers, Auto Layout або backend.
+
+## CHK-08 — P1 reported walkthrough та поточний G6
+
+- Дата підтвердження: 08.11.2026. Виконавець проходження: автор роботи; ChatGPT сам кліки не виконував.
+- На перелік семи сценаріїв автор відповів «да». У Prototype_Test_Record.md P-01–P-07 записано PASS — reported, а не independent PASS.
+- Review: усі 33 AC отримали окремий result із поділом V/P/I; частина NOT VERIFIABLE через unreadable current REF та implementation boundary. Не заявлено «всі AC виконано».
+- Current data: 8 baseline records + new ISS-009; синхронізацію зафіксовано в 06_Review_Report.md §2, історичний brief не підмінено.
+- Findings: DEF-01 (порожній Assignee замість Unassigned) OPEN; Q-UI-01 (initial/staged Apply) OPEN; Q-EV-01 (читабельність нового REF) OPEN. Немає доказів, що вони вже виправлені.
+- Висновок: основні маршрути REPORTED; design review PARTIAL; backend/NFR outstanding. До остаточного здавання потрібні resolution findings, readable REF та Figma URL/version.
+
+## Current design findings — 08.11.2026
+
+| ID | Статус | Рішення / повторна перевірка |
+|---|---|---|
+| DEF-01 | OPEN | Потрібно додати Unassigned або явно відхилити зауваження з причиною; виправлення не надано |
+| Q-UI-01 | OPEN | Уточнити initial/staged Apply; за initial — disabled до іншого вибору |
+| Q-EV-01 | OPEN | Надати читабельний current REF-01 sections; не називати unreadability відсутністю станів |
+| DOC-01 | DOCUMENTED | Фактичні fixtures описано в Review Report; це не доказ відповідності всіх hidden states |
+
+Ранні REV-01–04 стосуються readiness G4/G5; DEF-01 та Q-ID цього розділу — поточного design review. Ідентифікатори не підмінюють одне одного.
+
+
+## CHK-09 — повторний огляд REF та шести виправлених frames
+
+- Дата: 08.11.2026; reviewer: ChatGPT; метод: аналіз 20 читабельних REF screenshots та шести нових основних PNG із суфіксом (1).
+- Artifacts: 06_Review_Report.md 1.0; поточні Figma screenshots, exact file/version URL ще не надано.
+- DEF-01 CLOSED visual: Unassigned у new details, populated/empty after-create та baseline lists.
+- Q-UI-01 CLOSED visual: Apply у initial S-03 disabled; before/pending/applied reference відокремлює вибір від збереженої зміни.
+- Q-EV-01 CLOSED: прочитано current permissions, single-assignee options, priority options, усі чотири status transitions, comment outcomes, Important before/after closing та both-empty validation.
+- Додано mapping усіх 17 Control IDs між Contracts та новим REF, щоб зберегти Traceability.
+- DOC-02 OPEN: застарілий wording про wiring, empty Assignee та D-range. Виправлення рекомендовано в чаті; після цього підтвердження виконання ще не отримано.
+- Результат: потрібні UI state representations присутні; відомі display findings закриті. Не заявлено PASS реальної authorization/persistence або незалежний P walkthrough.
+- Регресія прототипу після останніх правок: NOT REPORTED. Попередні сім PASS-reported лишаються історичним записом; не переписуються як новий тест.
+- Доказ: 06_Review_Report.md §8, current evidence files. Останній запис CHK-09 є актуальним resolution status, попередні OPEN entries збережено як історію.
+
+## CHK-10 — посилання та README
+
+08.11.2026 автор надав URL Design file та назву «Mini Issue Tracker — Final». ChatGPT додав їх до README, Review Report 1.1 та Prototype Record 1.1. Автоматичне відкриття URL не вдалося; live content, sharing permission і named version не перевірені. Це документаційне оновлення, не повторний UI/P audit. DOC-02 та regression confirmation лишаються pending.
