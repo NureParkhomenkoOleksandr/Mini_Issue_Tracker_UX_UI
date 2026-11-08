@@ -1,6 +1,6 @@
 # Review / Defect / Change Log — Mini Issue Tracker
 
-Версія: 0.5  
+Версія: 1.0  
 Дата створення: 07.11.2026
 
 Журнал створено на етапі G4. Раніше описані перевірки фіксуються ретроспективно лише в межах видимих дій цього чату. Нові перевірки додаються окремими записами. Усі review тут виконані ChatGPT у тому самому чаті, якщо явно не вказано іншого перевіряльника. Незалежна людська перевірка не вигадується.
@@ -79,3 +79,9 @@
 ## CHK-10 — посилання та README
 
 08.11.2026 автор надав URL Design file та назву «Mini Issue Tracker — Final». ChatGPT додав їх до README, Review Report 1.1 та Prototype Record 1.1. Автоматичне відкриття URL не вдалося; live content, sharing permission і named version не перевірені. Це документаційне оновлення, не повторний UI/P audit. DOC-02 та regression confirmation лишаються pending.
+
+## CHK-11 — закриття DOC-02 та regression confirmation
+
+08.11.2026 автор підтвердив «да»: три пояснення REF-01 виправлені; сім маршрутів після correction працюють. Reviewer walkthrough: автор роботи. ChatGPT зафіксував повідомлення, але не виконував повторні кліки та не оглядав нові текстові screenshot-рядки.
+
+Актуальні статуси: DOC-02 CLOSED — reported; P-01–P-07 PASS — reported after correction; DEF-01/Q-UI-01/Q-EV-01 CLOSED — visual за CHK-09. Попередні OPEN/pending записи є історичними. Оновлено README, Review Report 1.2, Prototype Record 1.2 та AI log. Повний незалежний аудит, layer inspection, sharing permissions і implementation checks не заявляються.

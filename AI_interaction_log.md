@@ -1,6 +1,6 @@
 # AI Interaction Log — Mini Issue Tracker
 
-Версія: 0.5  
+Версія: 1.0  
 Дата створення: 07.11.2026
 
 Журнал складено ретроспективно на G4 за діями поточного чату. Це стислий index, а не повний verbatim transcript. Повні запити/відповіді ще потрібно зберегти з чату для відтворюваності; цього файла самого недостатньо як копії діалогу.
@@ -67,3 +67,7 @@ Operator: автор роботи (користувач чату). Tool: ChatGPT
 ## AI-12 — Figma URL та README
 
 08.11.2026 користувач надав Design URL і назву «Mini Issue Tracker — Final». ChatGPT спробував відкрити URL, отримав недоступність через інструмент; не робив висновків про private/public доступ. Підготовлено README.md, оновлено Review Report/Prototype Record та журнали. Новий Figma generation, screenshot capture або повторний walkthrough не виконувалися.
+
+## AI-13 — остаточне підтвердження автора
+
+08.11.2026 користувач відповів «да» після питання про виправлення REF-01 та повторне проходження семи маршрутів після останніх правок. Результат внесено як reported evidence, не independent review. DOC-02 закрито reported; повторні P-01–P-07 — PASS-reported after correction. Підготовлено оновлені документи та узгоджений архів для репозиторію. Автоматичних Figma edits, нової generation або remote git push у цьому кроці не було.
